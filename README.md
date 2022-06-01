@@ -1,1 +1,1 @@
-# pedea-ai
+pequeno projeto
