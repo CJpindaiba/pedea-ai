@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/*slide para celular*/
+.celular{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.slidecel{
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all 0.5s;   
+}
+.slidescel{
+    width: 2100px;
+    display: flex;
+
+}
+.image img{
+    width: 300px;
+    height: 400px;
+}
+.atual1{
+    
+    transition: all;
+}
+.btn1{
+    position: absolute;
+    background-color: rgb(43, 226, 83);
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s;
+    font-size: 1.7em;
+    margin-top: -5px;
+}
+.btn1:hover{
+    transform: scale(1.5);
+} 
+#voltar1{
+    top: 120%;
+    left: 10%;
+    display: none;
+}
+#next1{
+    top: 120%;
+    left: 10%;
+    display: none;
+} 
+.balls1 div{
+    transition: all 0.5s;
+    border: 3px solid white;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.balls1 div:hover{
+    background: white;
+    display: none;
+}
+.imgAtual1{
+    transition: all 0.5s;
+    background: white;
+}
+
+
+/* slide para pc*/
+.computador{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.slide{
+    width: 1024px;
+    height: 576px;
+    
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all 0.4s;
+
+}
+.slides{
+    width: 5120px;
+    display: flex;
+    
+}
+.image img{
+    width: 1024px;
+    height: 576px;
+
+
+}
+#atual{
+    
+    transition: all 2s;
+}
+.btn{
+    position: absolute;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s;
+    font-size: 1.7em;
+    margin-top: -5px;
+}
+.btn:hover{
+    transform:scale(1.5) ;
+}
+#voltar{
+    top: 50%;
+    left: 20%;
+    display: none;
+}
+#next{
+    top: 50%;
+    right: 20%;
+    display: none;
+}
+.balls{
+    position: absolute;
+    width: 1024px;
+    display: flex;
+    justify-content: center;
+    
+}
+.balls div{
+    transition: all 0.5s;
+    border: 3px solid white;
+    padding: 6px;
+    border-radius: 50%;
+    margin-right: 15px;
+    cursor: pointer;
+
+}
+.balls div:hover{
+    background-color: white;
+}
+.imgAtual{
+    transition: all 0.5s;
+    background-color: white;
+}
+.foto{
+    width: 1024px;
+    height: 512px;
+    overflow: hidden;
+    border: solid;
+    border-radius: 15px;
+}
+h2{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+form{
+    text-align: center;
+}
+.b1{
+    padding: 10px;
+    width: 800px;
+}
+.b2{
+    padding: 10px;
+    width: 800px;
+}
+.b3{
+    padding: 10px;
+    width: 800px;
+}
+.b4{
+    padding: 10px;
+    width: 825px;
+}
+header{
+    margin-top: 20px;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: 30%;
+    margin-top: 30px;
+    
+   
+}
+.c1{
+    
+    margin: 20px;
+    list-style-image: url(./ig.png);
+    list-style-position: inside;
+    
+}
+.c2{
+   
+   margin: 20px;
+   list-style-image: url(./face.png);
+   list-style-position: inside;
+}
+.c3{
+    
+    margin: 20px;
+    list-style-image: url(./wpp.png);
+    list-style-position: inside;
+    
+}
+.links:visited{
+    color: white;
+}
+h1{
+    text-align: center;
+    color: white;
+    font-size: 45px;
+}
+h2{
+    font-size: 45px;
+}
+.foto1{
+    display: none;
+}
+.PC1{
+    display: none;
+}
+
+
+.slide1{
+    width: 350px;
+    height: 400px;
+    
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all 0.4s;
+
+}
+.slides1{
+    width: 5120px;
+    display: flex;
+    
+}
+
+@media  screen and (min-width:601px) {
+    .celular{
+        display: none;
+
+    }
+    
+}
+
+
+@media screen and (max-width:600px){
+    header{
+        width: 90%;
+    }
+    .slides{
+        display: none;
+    }
+    .slide{
+        display: none;
+    }
+  
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        
+    }
+
+    .slide{
+        width: 300px;
+        height: 400px;
+        position: static;
+    }
+    .PC{
+        display: none;
+    }
+   
+    .foto{
+        display: none;
+        
+    }
+    .foto1{
+      width: 300px;  
+      height: 200px; 
+      display: block;
+      margin: auto;
+      border: solid;
+      border-radius: 15px;
+
+    }
+    .b1{
+        width: 250px;
+        height: 60px;
+    }
+    .b2{
+        width: 250px;
+        height: 60px;
+
+    }
+    .b3{
+        width: 250px;
+        height: 60px;
+
+    }
+    .b4{
+        width: 275px;
+        height: 80px;
+  
+    }
+    h1{
+        color: white;
+        text-align: center;
+        font-size: 25px;
+    } 
+
+  
+    
+    body{
+        overflow-x: hidden;
+    }
+
+   
+    
+}
+ 
+@media  screen and (max-width:320px){
+
+    .balls{
+        width: 300px;
+        top: 1090px;
+        justify-content: center;
+        
+    }
+    .ul{
+        margin-left: 0;
+    }
+    #voltar{
+        top: 1080px;
+        left: 7%;
+    }
+    #next{
+        top: 1080px;
+        right: 10%;
+    }
+}
+@media  screen and (min-width:321px) and (max-width:360px){
+    .balls{
+        width: 300px;
+        top: 1040px;
+        justify-content: center;
+        
+    }
+    #voltar{
+        top: 1030px;
+        left: 11%;
+    }
+    #next{
+        top: 1030px;
+        right: 15%;
+    }
+
+}
+
+
+
+

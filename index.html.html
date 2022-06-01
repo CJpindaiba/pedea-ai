@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="caroussel.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="./icon.png" type="image.png">
+    <title>Pedeaçai</title>
+</head>
+<header>
+    <h1>EXPERIMENTE O MELHOR DA CIDADE!!!!
+        <br><BR>
+        CONHEÇA NOSSAS REDES SOCIAIS:
+    </h1>
+    <div class="media">
+        <ul>
+            <a class="links" href="https://www.instagram.com/pedeacai10/">
+                <li class="c1"></li>
+            </a>
+
+            <a class="links" href="https://www.facebook.com/profile.php?id=100072529314900">
+                <li class="c2"></li>
+            </a>
+            <a class="links" href="https://api.whatsapp.com/send?phone=5537998014074&text=Ol%C3%A1">
+                <li class="c3"></li>
+            </a>
+        </ul>
+    </div>
+</header>
+
+<body>
+    <br><br><br>
+<div class="computador">
+    <div class="slide">
+        <div class="slides">
+
+            <div id="voltar" class="btn">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <div id="next" class="btn">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+
+            <div id="atual" class="image">
+                <img class="PC" src="./0.jpeg" alt="">
+
+            </div>
+
+            <div class="image">
+                <img class="PC" src="1.jpeg" alt="">
+
+            </div>
+
+            <div class="image">
+                <img class="PC" src="./2.jpg" alt="">
+
+            </div>
+
+            <div class="image">
+                <img class="PC" src="./3.jpg" alt="">
+
+            </div>
+
+            <div class="image">
+                <img class="PC" src="./4.jpg" alt="">
+
+            </div>
+
+            <div class="image">
+                <img class="PC" src="./5.jpg" alt="">
+
+            </div>
+
+        </div>
+        <div class="balls">
+            <div class="imgAtual" id="0"></div>
+            <div id="1"></div>
+            <div id="2"></div>
+            <div id="3"></div>
+            <div id="4"></div>
+            <div id="5"></div>
+        
+        </div>
+    </div>
+</div>
+    <div class="celular">
+        <div class="slidecel">
+            <div class="slidescel">
+
+                <div id="voltar1" class="btn1">
+                    <i class="fas fa-chevron-left1"></i>
+                </div>
+                <div id="next1" class="btn1">
+                    <i class="fas fa-chevron-right1"></i>
+                </div>
+
+                <div id="atual1" class="image1">
+                    <img src="./a0.jpg" alt="">
+                </div>
+                <div class="image1">
+                    <img src="./a1.jpg" alt="">
+                </div>
+                <div class="image1">
+                    <img src="./a2.jpg" alt="">
+                </div>
+                <div class="image1">
+                    <img src="./a3.jpg" alt="">
+                </div>
+                <div class="image1">
+                    <img src="./a4.jpg" alt="">
+                </div>
+                <div class="images">
+                    <img src="./a5.jpg" alt="">
+                </div>
+            </div>
+            <div class="balls1">
+                <div class="imgAtual1" id="a0"></div>
+                <div id="a1"></div>
+                <div id="a2"></div>
+                <div id="a3"></div>
+                <div id="a4"></div>
+                <div id="a5"></div>
+            </div>
+        </div>
+
+    </div>
+    <br> <br>
+
+    </div>
+    <script>
+        var balls1 = document.querySelector('.balls1')
+        var quant = document.querySelectorAll('.slides1 .image1')
+        var atual1 = 0
+        var imagem1 = document.getElementById('atual1')
+        var next1 = document.getElementById('next1')
+        var voltar1 = document.getElementById('voltar1')
+    
+        for(let i=0; i < quant.length; i++){
+            var div = document.createElement('div')
+            div.id = i
+            balls1.appendChild(div)
+        }
+        document.getElementById('a0').classList.add('imgAtual1')
+    
+        var pos = document.querySelectorAll('.balls1 div')
+    
+        for(let i=0; i< pos.length; i++){
+            pos[i].addEventListener('click', ()=>{
+                atual1 = pos[i].id
+                slide1()
+            })        
+        }
+    
+        voltar1.addEventListener('click', ()=>{
+            atual1--
+            slide1()
+        })
+        voltar1.addEventListener('click', ()=>{
+            atual1++
+            slide1()
+        })
+    
+        function slide1(){
+            if(atual1 >= quant.length){
+                atual1 = 0
+            }
+            else if(atual1 < 0){
+                atual1 = quant.length-a1
+            }
+            document.querySelector('.imgAtual1').classList.remove('.imgAtual1')
+            imagem1.style.marginLeft = -300*atual1+'px'
+            document.getElementById(atual1).classList.add('.imgAtual1')
+        }
+        setInterval(()=>{
+            atual1++
+            slide1()
+        },3000)
+        
+    </script>
+</body>
+
+
+
+
+<footer>
+
+    <img class="foto" src="./a3.jpeg" alt="">
+    <img class="foto1" src="./pcelll.jpeg" alt="baner">
+
+    <br><br>
+
+    <div class="txt">
+        <h1>FAÇA SEU CADASTRO</h1>
+    </div>
+    <br><br>
+    <form action="https://gmail.us13.list-manage.com/subscribe/post?u=23bae4dd3dc664475b216f0e8&amp;id=7dedb4ac4c"
+        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+        novalidate>
+
+        <input class="b1" id="name" name="FNAME" type="text" placeholder="Nome"><br>
+        <input class="b2" id="email" name="EMAIL" type="text" placeholder="Email"><br>
+        <input class="b3" id="telefone" name="TELEFONE" type="text" placeholder="(037)-99999-9999">
+
+        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                name="b_23bae4dd3dc664475b216f0e8_7dedb4ac4c" tabindex="-1" value=""></div>
+        <br>
+        <input class="b4" type="submit" value="INSCREVA-SE">
+
+    </form>
+    <br><br>
+
+
+</footer>
+
+</html>
